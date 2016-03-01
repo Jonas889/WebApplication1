@@ -1,0 +1,26 @@
+﻿@using WebApplication1.Models
+@using System;
+@model Customer[]
+
+
+<html>
+<head>
+    <title>Customers</title>
+</head>
+<body>
+    <h1> Customers</h1>
+   <table border="0" style="border:2px solid green">
+       <tr>
+           <th>Companyname</th>
+           <th>City</th>
+       </tr>
+       @foreach (var item in Model)
+       {
+            <tr>
+                <td>@item.CompanyName</td>
+                <td>@item.City</td>
+            </tr>           
+       }
+   </table>
+</body>
+</html>

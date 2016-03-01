@@ -1,0 +1,32 @@
+﻿@using ASPNETGruppArbete.Models
+@model Band[]
+
+<html>
+<head>
+    <title>My Bandpage</title>
+</head>
+<body>
+    <div class="row">
+    
+        <table>
+            <tr>
+                <td colspan="3" align="center"><h1>Foo Fighters</h1></td>
+            </tr>
+            <tr>
+                <th>Bandname</th>
+                <th>Description</th>
+                <th>Link To Albums</th>
+            </tr>
+            @foreach (var b in Model)
+            {
+                <tr>
+                    <td>@b.BandName</td>
+                    <td>@b.Description</td>
+                    <td><a href="./Albums/index/@b.Id">To Albums</a></td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@using ASPNETGruppArbete.Models
+@model Album[]
+
+<html>
+<head>
+    <title>Albums</title>
+</head>
+<body>
+    
+        <table>
+            <tr>
+
+                <td colspan="3" align="center"><h1>Foo Fighters</h1></td>
+            </tr>
+            <tr>
+                <th>Album</th>
+                <th>Year</th>
+                <th>Link</th>
+
+            </tr>
+            @foreach (var b in Model)
+            {
+                <tr>
+                    
+                    <td>@b.Titel</td>
+                    <td>@b.Year</td>
+                    <td><a button href="~/Albums/Details/@b.Aid" type="button" class="btn btn-info" onclick="~/Albums/Details/@b.Aid">Details</a></td>
+
+                </tr>
+            }
+
+        </table>
+</body>
+</html>
